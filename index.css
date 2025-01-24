@@ -1,0 +1,203 @@
+/* Style général */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  height: 100vh;
+  background-image: url('https://static.vecteezy.com/system/resources/previews/012/484/301/large_2x/pixel-cityscape-8-bit-pixel-art-game-landscape-vector.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Menu principal */
+#menu {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  padding: 30px;
+  color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+#menu h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px 0;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+/* Histoire (écran intermédiaire) */
+#story {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  padding: 30px;
+  color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+#story h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+#story p {
+  font-size: 18px;
+  margin-bottom: 20px;
+  width: 300px;
+}
+
+/* Zone de jeu */
+.game-container {
+  .game-container {
+  background-size: cover; /* Cela va couvrir toute la zone */
+  background-position: center;
+  height: 80vh; /* Utilise 80% de la hauteur de la fenêtre */
+  width: 90vw;  /* Utilise 90% de la largeur de la fenêtre */
+  position: relative;
+  max-width: 900px;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: none;
+  display: none; /* Initialement caché */
+}
+
+#header {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+#header h1 {
+  font-size: 28px;
+  margin: 10px 0;
+}
+
+.round, .score {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+/* Zone de combat */
+.combat-area {
+  position: relative;
+  height: 60%;
+  width: 100%;
+}
+
+.fighter {
+  width: 12vw;  /* Taille du personnage en fonction de la largeur de l'écran */
+  height: 12vh; /* Taille du personnage en fonction de la hauteur de l'écran */
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+  opacity: 0.7;  /* Transparence des personnages */
+}
+
+#player {
+  left: 10%;
+}
+
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  bottom: 0;
+  background-size: cover;
+  z-index: 1;
+  opacity: 0.7; /* Transparence des personnages */
+}
+
+#player {
+  background-image: url('https://i.pinimg.com/originals/ef/92/39/ef923957378e55ff4ead9f4c673e9ee4.gif');
+  right: 10%;
+}
+
+#bot {
+  background-image: url('https://th.bing.com/th/id/OIP.2_Wu-aXvnBdSmxjtVUv6LQHaHa?rs=1');
+  left: 0%;
+}
+
+.player-info {
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  z-index: 2;
+}
+
+#player-name {
+  bottom: 130px;
+}
+
+#bot-name {
+  bottom: 130px;
+}
+
+.hp {
+  font-size: 16px;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  color: white;
+  z-index: 2;
+}
+
+#player-hp {
+  bottom: 105px;
+}
+
+#bot-hp {
+  bottom: 105px;
+}
+
+/* Zone de texte pour les actions */
+.action-text {
+  position: absolute;
+  bottom: 60px;
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 5px;
+}
+
+/* Boutons d'attaque */
+.combat-buttons {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
