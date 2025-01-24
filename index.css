@@ -74,11 +74,10 @@ button:hover {
 
 /* Zone de jeu */
 .game-container {
-  .game-container {
-  background-size: cover; /* Cela va couvrir toute la zone */
+  background-size: cover;
   background-position: center;
-  height: 80vh; /* Utilise 80% de la hauteur de la fenêtre */
-  width: 90vw;  /* Utilise 90% de la largeur de la fenêtre */
+  height: 80vh;
+  width: 90vw;
   position: relative;
   max-width: 900px;
   border-radius: 10px;
@@ -115,35 +114,30 @@ button:hover {
 }
 
 .fighter {
-  width: 12vw;  /* Taille du personnage en fonction de la largeur de l'écran */
-  height: 12vh; /* Taille du personnage en fonction de la hauteur de l'écran */
+  width: 12vw;
+  height: 12vh;
   position: absolute;
   bottom: 0;
   z-index: 1;
-  opacity: 0.7;  /* Transparence des personnages */
+  opacity: 0.7;
 }
 
 #player {
   left: 10%;
-}
-
-  width: 100px;
-  height: 100px;
-  position: absolute;
-  bottom: 0;
-  background-size: cover;
-  z-index: 1;
-  opacity: 0.7; /* Transparence des personnages */
-}
-
-#player {
   background-image: url('https://i.pinimg.com/originals/ef/92/39/ef923957378e55ff4ead9f4c673e9ee4.gif');
-  right: 10%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 150px;
+  width: 150px;
 }
 
 #bot {
-  background-image: url('https://th.bing.com/th/id/OIP.2_Wu-aXvnBdSmxjtVUv6LQHaHa?rs=1');
   left: 0%;
+  background-image: url('https://th.bing.com/th/id/OIP.2_Wu-aXvnBdSmxjtVUv6LQHaHa?rs=1');
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 150px;
+  width: 150px;
 }
 
 .player-info {
@@ -200,4 +194,18 @@ button:hover {
   display: flex;
   justify-content: space-around;
   margin-top: 20px;
+}
+
+.combat-buttons button {
+  padding: 15px 30px;
+  font-size: 18px;
+  background-color: #1abc9c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.combat-buttons button:hover {
+  background-color: #16a085;
 }
