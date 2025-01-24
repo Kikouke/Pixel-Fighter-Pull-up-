@@ -4,23 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jeu Combat</title>
-  <link rel="stylesheet" href="index.css">
 </head>
 <body>
-  <!-- Menu principal -->
   <div id="menu">
     <h1>Bienvenue dans le Combat 1vs1</h1>
     <button id="play-button">Play</button>
   </div>
 
-  <!-- Histoire (initialement cachée) -->
   <div id="story" style="display: none;">
     <h1>Histoire</h1>
     <p>Dans une ville lointaine, deux combattants s'affrontent pour déterminer qui est le plus puissant. Le joueur, un guerrier en quête de gloire, a accepté le défi du mystérieux Bot, un adversaire redoutable construit pour vaincre. Qui remportera ce combat ? Vous allez le découvrir en affrontant cet adversaire impitoyable !</p>
     <button id="start-combat-button">Commencer le Combat</button>
   </div>
 
-  <!-- Zone de jeu (initialement cachée) -->
   <div class="game-container" id="game-container" style="display: none;">
     <div id="header">
       <h1>Combat 1vs1</h1>
@@ -28,35 +24,28 @@
       <div class="score">Score: <span id="player-score">0</span> - <span id="bot-score">0</span></div>
     </div>
     <div class="combat-area">
-      <!-- Joueur -->
       <div id="player" class="fighter"></div>
       <div id="player-name" class="player-info">Joueur</div>
       <div id="player-hp" class="hp">HP: 100</div>
 
-      <!-- Bot -->
       <div id="bot" class="fighter"></div>
       <div id="bot-name" class="player-info">Bot</div>
       <div id="bot-hp" class="hp">HP: 100</div>
     </div>
 
-    <!-- Zone de texte pour les actions -->
     <div id="action-text" class="action-text">
       <p>Préparez-vous au combat !</p>
     </div>
 
-    <!-- Boutons d'attaque -->
     <div class="combat-buttons">
       <button id="attack-button">Attaque</button>
       <button id="defend-button">Défendre</button>
       <button id="special-button">Spécial</button>
     </div>
 
-    <!-- Bouton de retour au menu, caché au début -->
     <div id="restart-container" style="display: none;">
       <button id="restart-button">Retour au Menu</button>
     </div>
   </div>
-
-  <script>index.js</script>
 </body>
 </html>
