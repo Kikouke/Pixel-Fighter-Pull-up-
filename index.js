@@ -1,4 +1,3 @@
-// Variables du jeu
 let playerHP = 100;
 let botHP = 100;
 let scorePlayer = 0;
@@ -8,9 +7,8 @@ let maxRounds = 5; // Limite de rounds
 
 // Fonction pour démarrer le jeu
 function startGame() {
-  // Cacher le menu et afficher la zone de jeu
   document.getElementById('menu').style.display = 'none';
-  document.getElementById('game').style.display = 'block';
+  document.getElementById('story').style.display = 'block';
 }
 
 // Fonction pour quitter le jeu
@@ -59,40 +57,41 @@ function special() {
   if (botHP <= 0) {
     scorePlayer++;
     endRound();
-    alert("Le Bot est KO! Tu as gagné ce round.");
+    alert("Le Bot est KO avec l'attaque spéciale! Tu as gagné ce round.");
   }
 
   document.getElementById('score').innerText = `${scorePlayer} - ${scoreBot}`;
 }
 
-// Réinitialiser la round
 function endRound() {
   round++;
   if (round > maxRounds) {
-    alert("Fin de la partie ! Score final: " + scorePlayer + " - " + scoreBot);
-    resetGame();
-  } else {
-    document.getElementById('round').innerText = round;
-    playerHP = 100;
-    botHP = 100;
-    document.getElementById('player-hp').innerText = "HP: " + playerHP;
-    document.getElementById('bot-hp').innerText = "HP: " + botHP;
+    endGame();
   }
 }
 
-// Réinitialiser la partie
+// Fonction pour finir le jeu
+function endGame() {
+  alert(`Le jeu est terminé! Score final: ${scorePlayer} - ${scoreBot}`);
+  resetGame();
+}
+
 function resetGame() {
-  round = 1;
-  scorePlayer = 0;
-  scoreBot = 0;
-  document.getElementById('score').innerText = `${scorePlayer} - ${scoreBot}`;
-  document.getElementById('round').innerText = round;
   playerHP = 100;
   botHP = 100;
-  document.getElementById('player-hp').innerText = "HP: " + playerHP;
-  document.getElementById('bot-hp').innerText = "HP: " + botHP;
-
-  // Afficher à nouveau le menu
-  document.getElementById('game').style.display = 'none';
+  scorePlayer = 0;
+  scoreBot = 0;
+  round = 1;
+  document.getElementById('game-container').style.display = 'none';
   document.getElementById('menu').style.display = 'block';
 }
+
+// Lier les événements aux boutons
+document.getElementById('play-button').addEventListener('click', startGame);
+document.getElementById('start-combat-button').addEventListener('click', () => {
+  document.getElementById('story').style.display = 'none';
+  document.getElementById('game-container').style.display = 'block';
+});
+document.getElementById('attack-button').addEventListener('click', attack);
+document.getElementById('defend-button').addEventListener('click', defend);
+document.getElementById('special-button').addEventListener('click', special);
